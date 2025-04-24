@@ -22,7 +22,11 @@ def signup(usuario: Usuario, db: Session = Depends(get_db)):  # <- aqui está o 
     usuario_criado = RepositorioUsuario(db).criar(usuario)
     return usuario_criado
 
-@router.get("/usuarios", response_description=List[Usuario])
+@router.get(
+    "/usuarios",
+    response_model=List[Usuario],           # <<< aqui
+    response_description="Lista de usuários"
+)
 def listar_usuario(session: Session = Depends(get_db)):
     usuarios = RepositorioUsuario(session).listar()
     return usuarios
