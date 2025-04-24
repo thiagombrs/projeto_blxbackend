@@ -1,9 +1,9 @@
 from fastapi import APIRouter, status, Depends, HTTPException
 from sqlalchemy.orm import Session
-from schemas.schemas import Pedido, ProdutoSimples
-from infra.sqlalchemy.repositorios.repositorio_produto import RepositorioProduto
+from src.schemas.schemas import Pedido, ProdutoSimples
+from src.infra.sqlalchemy.repositorios.repositorio_produto import RepositorioProduto
 from typing import List
-from infra.sqlalchemy.config.database import get_db, criar_db
+from src.infra.sqlalchemy.config.database import get_db, criar_db
 
 router = APIRouter()
 

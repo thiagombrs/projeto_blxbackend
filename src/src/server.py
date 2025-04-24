@@ -2,10 +2,10 @@ from fastapi import FastAPI, Depends, status
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 from sqlalchemy.orm import Session
-from infra.sqlalchemy.config.database import get_db
-from routers import rotas_produtos
-from routers import rotas_auth
-from routers import rotas_pedidos
+from src.infra.sqlalchemy.config.database import get_db
+from src.routers import rotas_produtos
+from src.routers import rotas_auth
+from src.routers import rotas_pedidos
 
 
 #criar_db()

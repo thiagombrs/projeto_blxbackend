@@ -1,7 +1,7 @@
 from sqlalchemy import update, delete, select
 from sqlalchemy.orm import Session
-from schemas import schemas
-from infra.sqlalchemy.models import models
+from src.schemas import schemas
+from src.infra.sqlalchemy.models import models
 
 class RepositorioProduto():
 
