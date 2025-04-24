@@ -24,8 +24,8 @@ def signup(usuario: Usuario, db: Session = Depends(get_db)):  # <- aqui está o 
 
 @router.get(
     "/usuarios",
-    response_model=List[Usuario],           # <<< aqui
-    response_description="Lista de usuários"
+    response_model=List[Usuario],            # modelo correto
+    response_description="Lista de usuários" # descrição simples em string
 )
 def listar_usuario(session: Session = Depends(get_db)):
     usuarios = RepositorioUsuario(session).listar()
